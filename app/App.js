@@ -3,7 +3,6 @@ import { router } from './router-config.js';
 const USE_ROUTER = true
 
 class App {
-
   AuthController = new AuthController()
 
   constructor() {

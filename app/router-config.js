@@ -9,16 +9,7 @@ export const router = new Router([
   {
     path: '',
     controllers: [HomeController],
-    view: /*html*/`
-    <div class="bg-white p-3">
-      <div class="card-body">
-        <p>Gregslist</p>
-        <a href="#/cars">
-          <button class="btn btn-outline-dark" title="Go to the cars page">🚗</button>
-        </a>
-      </div>
-    </div>
-    `
+    view: `app/views/MainView.html`
   },
   {
     path: '#/cars',
@@ -34,6 +25,10 @@ export const router = new Router([
     middleware: [AuthGuard],
     controllers: [AccountController],
     view: 'app/views/AccountView.html',
+  },
+  {
+    path: `#/homes`,
+    view: `app/views/HomesView.html`
   }
 ])
 

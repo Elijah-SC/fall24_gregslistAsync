@@ -14,7 +14,6 @@ class Route {
    */
   constructor(routeConfig) {
     this.params = {}
-
     if (typeof routeConfig.path != 'string') {
       throw Pop.error('[ROUTE_ERROR::INVALID_ROUTE] No path was specified for route')
     }
