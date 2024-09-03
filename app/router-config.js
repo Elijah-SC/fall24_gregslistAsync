@@ -1,6 +1,7 @@
 import { AccountController } from "./controllers/AccountController.js";
 import { CarsController } from "./controllers/CarsController.js";
-import { HomeController } from "./controllers/HomeController.js";
+import { HomesController } from "./controllers/HomesController.js";
+import { MainController } from "./controllers/MainController.js";
 import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 
@@ -8,7 +9,7 @@ import { Router } from "./utils/Router.js";
 export const router = new Router([
   {
     path: '',
-    controllers: [HomeController],
+    controllers: [MainController],
     view: `app/views/MainView.html`
   },
   {
@@ -28,6 +29,7 @@ export const router = new Router([
   },
   {
     path: `#/homes`,
+    controllers: [HomesController],
     view: `app/views/HomesView.html`
   }
 ])
